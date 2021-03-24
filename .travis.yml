@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t mephisto2120/sw-debt-server-client -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true mephisto2120/sw-debt-server-client npm run test
