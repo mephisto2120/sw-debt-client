@@ -1,0 +1,14 @@
+FROM node:10-alpine
+
+# update packages
+RUN apk update
+
+WORKDIR "/app"
+COPY ./package.json ./
+RUN npm install
+
+# check files list
+RUN ls -a
+
+COPY . .
+CMD ["npm", "run", "start"]
