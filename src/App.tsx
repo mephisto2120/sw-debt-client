@@ -1,11 +1,10 @@
 import React from 'react';
+import './App.css';
 
-function App() {
+export default ({ children } : any) => {
   return (
     <div>
-      <h3>Hi there</h3>
+      {children}
     </div>
   );
-}
-
-export default App;
+};
