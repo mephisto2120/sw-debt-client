@@ -4,7 +4,7 @@ import Header from "./components/Header";
 export default ({ children } : any) => {
   return (
     <div>
-      {/*<Header />*/}
+      <Header />
       {children}
       Hi there!
     </div>
