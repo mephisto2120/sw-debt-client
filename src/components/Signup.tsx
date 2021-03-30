@@ -2,9 +2,16 @@ import React, {Component} from 'react';
 import { reduxForm, Field } from 'redux-form';
 
 class Signup extends Component {
+  onSubmit = (formProps: any) => {
+    console.log(formProps);
+  };
+
   render() {
+    // @ts-ignore
+    const { handleSubmit } = this.props;
+
     return (
-      <form>
+      <form onSubmit={handleSubmit(this.onSubmit)}>
         <fieldset>
           <label>Email</label>
           <Field
