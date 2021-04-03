@@ -2,19 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import './HeaderStyle.css';
-
-type AuthProps = {
-  authenticated: string;
-};
-
-type Auth = {
-  authenticated: string;
-  errorMessage: string;
-};
-
-type AuthState = {
-  auth: Auth;
-};
+import {AuthState} from 'reducers/types';
 
 // class Header extends Component<AuthProps, AuthState> {
 class Header extends Component {
