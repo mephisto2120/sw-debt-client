@@ -1,10 +1,12 @@
 import axios from 'axios';
 import { AUTH_USER, AUTH_ERROR } from './types';
 
+const ROOT_URL = 'http://localhost:11080';
+
 export const signup = (formProps, callback) => async dispatch => {
   try {
     const response = await axios.post(
-      'http://localhost:3090/signup',
+      ROOT_URL + '/signup',
       formProps
     );
 
@@ -19,7 +21,7 @@ export const signup = (formProps, callback) => async dispatch => {
 export const signin = (formProps, callback) => async dispatch => {
   try {
     const response = await axios.post(
-      'http://localhost:3090/signin',
+      ROOT_URL + '/signin',
       formProps
     );
 
