@@ -26,6 +26,24 @@ class Signup extends Component {
           />
         </fieldset>
         <fieldset>
+          <label>FirstName</label>
+          <Field
+            name="firstName"
+            type="text"
+            component="input"
+            autoComplete="none"
+          />
+        </fieldset>
+        <fieldset>
+          <label>LastName</label>
+          <Field
+            name="lastName"
+            type="text"
+            component="input"
+            autoComplete="none"
+          />
+        </fieldset>
+        <fieldset>
           <label>Password</label>
           <Field
             name="password"
